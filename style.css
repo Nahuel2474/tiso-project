@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+body {
+  background: #eee;
+  height: 190vh;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.2fr 2fr 0.5fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "title-side section-b-title"
+    "ph-side section-b-title"
+    "width-video section-b-content"
+    "width-video section-b-form";
+}
+
+.ph-side { display: grid; align-items: center; justify-content: center; grid-area: ph-side; background: black; }
+
+.section-b-title {border-left: 1px solid black; font-size: 25px; text-align: center; display: grid; align-items: center; justify-content: center; grid-area: section-b-title; background: #0fbcf9; }
+
+.section-b-content {padding: 3em; font-size: 22px; grid-area: section-b-content;  background: #3c40c6; }
+
+.section-b-form {display: grid; align-items: center; justify-content: center; grid-area: section-b-form;  background: #3c40c6;}
+
+.width-video { grid-area: width-video; width: 100%; height: 100%; }
+
+.title-side {display: flex; align-items: flex-end; justify-content: center;  grid-area: title-side; background: black; }
+
+.section-b-content img {width: 4em;}
+.inline {
+  display: inline-block;
+}
+
+.fondoA {
+  display: grid; 
+  align-items: center; 
+  justify-content: center;
+  width: 30em;
+  height: 5em;
+  background: orange;
+}
+
+.titleA {
+  font-size: 50px;
+}
+
+.fondoB {
+  display: grid; 
+  align-items: center; 
+  justify-content: center;
+  width: 50em;
+  height: 3em;
+  background: #0fbcf9;
+}
+
+.separador {
+  background: #eee;
+  width: 100%;
+  height: 5em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(10% 90%);
+  justify-items: center;
+  align-items: center;
+  background: #fbc531;
+}
+
+.titulo {
+  grid-column: 1 / span 4;
+  grid-row: 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.outside {
+  margin: 3em;
+  grid-row: 2;
+  position: relative;
+  width: 22em;
+  height: 15em;
+  background: orange;
+  clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 100%, 0 0);
+}
+
+.inside {display: grid; grid-template-rows: 50% 50%;justify-items: center; align-items: center;position: absolute;top: 10px;left: 10px;right: 10px;bottom: 10px;background: #3c40c6; clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 100%, 0 0);}
+
+.inside h1 {font-family: "Poppins", sans-serif; font-weight: 600;font-size: 1.3em;color: white;}
+
+.inside img {width: 5em;}
+
+.checkb {padding: 5em; display: grid; grid-template-columns: 75% 25%;justify-content: center; align-items: center; font-family: "Poppins", sans-serif;font-weight: 600;background: #3c40c6;}
+
+.checkb h1 {color: white; text-align: center;}
+
+.relative {border-radius: 5px; text-align: center; position: relative; box-shadow: 10px 10px 5px 0px orange;width: 300px;height: 80px;background-color: #fbc531;}
+
+a {font-size: 1.7em; text-decoration: none; color: black; font-family: "Poppins", sans-serif;font-weight: 600;}
+
+.relative img {position: absolute; width: 90px; top: -70%; right: -20%;}
+
+.end {display: grid; grid-template-columns: repeat(3, 1fr); align-items: center;  justify-content: center;}
+
+.center {display: grid; align-items: flex-end; justify-content: center;}
+
+.end-bg {width: 70%; font-size: 30px; background: #3c40c6; display: grid; align-items: center; justify-content: center;justify-self: center;}
+
+.end-title {color: white; text-align: center;grid-row: 1; grid-column: 2 /span 3;}
+
+.img1 { justify-self: center; grid-row: 2;grid-column: 1;width: 30em;height: 15em;}
+
+.img2 {justify-self: center;grid-row: 2;grid-column: 2;width: 30em;height: 15em;}
+
+.img3 {justify-self: center;grid-row: 2;grid-column: 3;width: 30em;height: 15em;}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~      300px to 720px               ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (min-width: 300px) and (max-width:719px)  {
+
+/* APARTADO A */
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 130px 70px 320px 200px 150px 130px;
+  grid-auto-flow: row;
+}
+
+.ph-side { font-size: 14px; }
+
+
+.section-b-title { font-size: 16px; grid-row: 4; grid-column: 1; }
+
+.section-b-content {padding: 1em; font-size: 10px; grid-row: 5; grid-column: 1;}
+
+.section-b-form {grid-row: 6; grid-column: 1;}
+
+.width-video {height: 20em;}
+
+.section-b-content img { width: 2em;}
+
+.fondoA { width: 50%; height: 5em; }
+
+.titleA { font-size: 30px;}
+
+.fondoB { width: 25em;}
+
+/* APARTADO B */
+
+.container {display: grid;grid-template-columns: repeat(2, 1fr);grid-template-rows: 10% 45% 45%;justify-items: center;align-items: center;background: #fbc531;height: 30em;}
+  
+.outside {margin: 1em;width: 9em;height: 9em;background: orange;clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 100%, 0 0);}
+
+#number_3 {grid-column: 1;grid-row: 3;}
+
+#number_4 {grid-column: 2;grid-row: 3;}
+
+.titulo { grid-column-start: 1; grid-column-end: 3; font-size: 20px;  grid-row: 1;}
+
+.inside {position: absolute;top: 5px;left: 5px;right: 5px;bottom: 5px;}
+
+.inside h1 {font-size: 9px;}
+
+.inside img {width: 3em;}
+
+
+
+.checkb {padding: 0em; display: grid; grid-template-rows: 5em 8em; grid-template-columns: 100%;}
+
+.checkb h1 {color: white; text-align: center; font-size: 16px;}
+
+.centered {display: grid; justify-content: center;}
+
+.relative {border-radius: 5px; text-align: center; position: relative; box-shadow: 10px 10px 5px 0px orange;width: 8em;height: 80px;background-color: #fbc531;}
+
+a {font-size: 1.5em;}
+
+.relative img {position: absolute; width: 2em; top: -50%; right: -17%;}
+
+
+/* APARTADO C */
+  
+.end {display: grid; grid-template-rows: repeat(3, 1fr); grid-template-columns: 100%; align-items: center;  justify-content: center;}
+
+.center {display: grid; align-items: flex-end; justify-content: center;}
+
+.end-bg {width: 90%; font-size: 10px; background: #3c40c6; display: grid; align-items: center; justify-content: center;justify-self: center;}
+
+.end-title { color: white; text-align: center;grid-row: 1; grid-column: 2 /span 3;}
+
+.img1 {margin-bottom: 2em; justify-self: center; grid-row: 1;grid-column: 1;width: 300px;height: 180px;}
+
+.img2 {justify-self: center;grid-row: 2;grid-column: 1;width: 300px;height: 180px;}
+
+.img3 {justify-self: center;grid-row: 3;grid-column: 1;width: 300px;height: 180px;}
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~      720px to 1024px               ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (min-width:720px) and (max-width:1024px) {
+  
+/* APARTADO A */
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 360px 360px;
+  grid-template-rows: 0.5fr 0.2fr 0.5fr 0.5fr;
+}
+
+.ph-side { font-size: 12px;  }
+
+
+.section-b-title { font-size: 12px;  }
+
+.section-b-content {padding: 1em; font-size: 10px; }
+
+.width-video {width: 360px; height: 20em;}
+
+.section-b-content img { width: 2em;}
+
+.fondoA { width: 50%; height: 5em; }
+
+.titleA { font-size: 16px;}
+
+.fondoB { width: 20em; margin: 1em;}
+
+/* APARTADO B */
+
+.container {display: grid;grid-template-columns: repeat(2, 1fr);grid-template-rows: 10% 45% 45%;justify-items: center;align-items: center;background: #fbc531;height: 30em;}
+  
+.outside {margin: 1em;width: 15em;height: 10em;background: orange;clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 100%, 0 0);}
+
+#number_3 {grid-column: 1;grid-row: 3;}
+
+#number_4 {grid-column: 2;grid-row: 3;}
+
+.titulo { grid-column-start: 1; grid-column-end: 3; font-size: 25px;  grid-row: 1;}
+
+.inside {position: absolute;top: 5px;left: 5px;right: 5px;bottom: 5px;}
+
+.inside h1 {font-size: 14px;}
+
+.inside img {width: 4em;}
+
+
+
+.checkb {padding: 0em; display: grid; grid-template-rows: 5em 8em; grid-template-columns: 100%;}
+
+.checkb h1 {color: white; text-align: center; font-size: 20px;}
+
+.centered {display: grid; justify-content: center;}
+
+.relative {border-radius: 5px; text-align: center; position: relative; box-shadow: 10px 10px 5px 0px orange;width: 8em;height: 80px;background-color: #fbc531;}
+
+a {font-size: 1.5em;}
+
+.relative img {position: absolute; width: 2em; top: -50%; right: -17%;}
+
+
+/* APARTADO C */
+  
+.end {display: grid; grid-template-rows: repeat(3, 1fr); grid-template-columns: 100%; align-items: center;  justify-content: center;}
+
+.center {display: grid; align-items: flex-end; justify-content: center;}
+
+.end-bg {width: 90%; font-size: 16px; background: #3c40c6; display: grid; align-items: center; justify-content: center;justify-self: center;}
+
+.end-title { color: white; text-align: center;grid-row: 1; grid-column: 2 /span 3;}
+
+.img1 {margin-bottom: 2em; justify-self: center; grid-row: 1;grid-column: 1;width: 300px;height: 180px;}
+
+.img2 {justify-self: center;grid-row: 2;grid-column: 1;width: 300px;height: 180px;}
+
+.img3 {justify-self: center;grid-row: 3;grid-column: 1;width: 300px;height: 180px;}
+}
+
